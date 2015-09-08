@@ -31,6 +31,9 @@ var RegistrationView = require('./components/RegistrationView.jsx');
 var engergyBreakDown = require('./components/energyBreakDownView.jsx');
 var modalStore = require('./stores/modalStore');
 
+//FOR TESTING
+var UserPieChart = require('./components/UserPieChartView.jsx');
+
 // Stores -- Load here so Stores can begin listening to Events
 var UserStore = require('./stores/UserStore');
 var DataStore = require('./stores/DataStore');
@@ -158,6 +161,9 @@ var App = React.createClass({
 var routes = (
   <Route name="app" path="/" handler={App}>
   <Route name="profile" path="/profile" handler={ProfileView} />
+
+  <Route name="pie" path="/pie" handler={UserPieChart} />
+
   <DefaultRoute name="default" handler={MainView} />
   </Route>
 );
